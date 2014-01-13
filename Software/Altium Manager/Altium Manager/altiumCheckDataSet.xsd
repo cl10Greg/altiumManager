@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="altiumCheckDataSet" targetNamespace="http://tempuri.org/altiumCheckDataSet.xsd" xmlns:mstns="http://tempuri.org/altiumCheckDataSet.xsd" xmlns="http://tempuri.org/altiumCheckDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="altiumCheckConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="altiumCheckConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Altium_Manager.My.MySettings.GlobalReference.Default.altiumCheckConnectionString" Provider="Microsoft.SqlServerCe.Client.4.0" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="altiumCheckConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="altiumCheckConnectionString1 (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Altium_Manager.My.MySettings.GlobalReference.Default.altiumCheckConnectionString1" Provider="Microsoft.SqlServerCe.Client.4.0" />
+        </Connections>
+        <Tables />
+        <Sources>
+          <DbSource ConnectionRef="altiumCheckConnectionString1 (MySettings)" DbObjectName="users" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="getUsersQuery" MethodsParameterType="CLR" Modifier="Public" Name="getUsersQuery" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="getUsersQuery">
+            <SelectCommand>
+              <DbCommand CommandType="Text" ModifiedByUser="true">
+                <CommandText>SELECT        userName, userPass, userType, userID
+FROM            users</CommandText>
+                <Parameters />
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="altiumCheckDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="altiumCheckDataSet" msprop:Generator_UserDSName="altiumCheckDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
