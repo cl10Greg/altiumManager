@@ -22,6 +22,7 @@ Partial Class newUserCtrl
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -32,6 +33,12 @@ Partial Class newUserCtrl
         Me.roleCmb = New System.Windows.Forms.ComboBox()
         Me.createBtn = New System.Windows.Forms.Button()
         Me.clearBtn = New System.Windows.Forms.Button()
+        Me.AltiumDatabaseDataSet = New AltiumManager.AltiumDatabaseDataSet()
+        Me.UsersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.UsersTableAdapter = New AltiumManager.AltiumDatabaseDataSetTableAdapters.UsersTableAdapter()
+        Me.TableAdapterManager = New AltiumManager.AltiumDatabaseDataSetTableAdapters.TableAdapterManager()
+        CType(Me.AltiumDatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.UsersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -83,13 +90,14 @@ Partial Class newUserCtrl
         Me.passTxt.Name = "passTxt"
         Me.passTxt.Size = New System.Drawing.Size(202, 20)
         Me.passTxt.TabIndex = 5
+        Me.passTxt.UseSystemPasswordChar = True
         '
         'emailTxt
         '
         Me.emailTxt.Location = New System.Drawing.Point(76, 110)
         Me.emailTxt.Name = "emailTxt"
         Me.emailTxt.Size = New System.Drawing.Size(202, 20)
-        Me.emailTxt.TabIndex = 6
+        Me.emailTxt.TabIndex = 7
         '
         'roleCmb
         '
@@ -99,7 +107,7 @@ Partial Class newUserCtrl
         Me.roleCmb.Location = New System.Drawing.Point(76, 73)
         Me.roleCmb.Name = "roleCmb"
         Me.roleCmb.Size = New System.Drawing.Size(202, 21)
-        Me.roleCmb.TabIndex = 7
+        Me.roleCmb.TabIndex = 6
         '
         'createBtn
         '
@@ -119,6 +127,26 @@ Partial Class newUserCtrl
         Me.clearBtn.Text = "Clear"
         Me.clearBtn.UseVisualStyleBackColor = True
         '
+        'AltiumDatabaseDataSet
+        '
+        Me.AltiumDatabaseDataSet.DataSetName = "AltiumDatabaseDataSet"
+        Me.AltiumDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'UsersBindingSource
+        '
+        Me.UsersBindingSource.DataMember = "Users"
+        Me.UsersBindingSource.DataSource = Me.AltiumDatabaseDataSet
+        '
+        'UsersTableAdapter
+        '
+        Me.UsersTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.UpdateOrder = AltiumManager.AltiumDatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.UsersTableAdapter = Me.UsersTableAdapter
+        '
         'newUserCtrl
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -134,7 +162,9 @@ Partial Class newUserCtrl
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "newUserCtrl"
-        Me.Size = New System.Drawing.Size(295, 178)
+        Me.Size = New System.Drawing.Size(299, 179)
+        CType(Me.AltiumDatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.UsersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -149,5 +179,9 @@ Partial Class newUserCtrl
     Friend WithEvents roleCmb As System.Windows.Forms.ComboBox
     Friend WithEvents createBtn As System.Windows.Forms.Button
     Friend WithEvents clearBtn As System.Windows.Forms.Button
+    Friend WithEvents AltiumDatabaseDataSet As AltiumManager.AltiumDatabaseDataSet
+    Friend WithEvents UsersBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents UsersTableAdapter As AltiumManager.AltiumDatabaseDataSetTableAdapters.UsersTableAdapter
+    Friend WithEvents TableAdapterManager As AltiumManager.AltiumDatabaseDataSetTableAdapters.TableAdapterManager
 
 End Class

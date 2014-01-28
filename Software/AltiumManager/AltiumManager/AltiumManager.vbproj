@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -70,12 +85,50 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="activeUserClass.vb" />
+    <Compile Include="adminHub.Designer.vb">
+      <DependentUpon>adminHub.vb</DependentUpon>
+    </Compile>
+    <Compile Include="adminHub.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="adminUserCtrl.Designer.vb">
+      <DependentUpon>adminUserCtrl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="adminUserCtrl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AltiumDatabaseDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AltiumDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="changePassCtrl.Designer.vb">
+      <DependentUpon>changePassCtrl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="changePassCtrl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="designerHub.Designer.vb">
+      <DependentUpon>designerHub.vb</DependentUpon>
+    </Compile>
+    <Compile Include="designerHub.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="librarianHub.Designer.vb">
+      <DependentUpon>librarianHub.vb</DependentUpon>
+    </Compile>
+    <Compile Include="librarianHub.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="loginClass.vb" />
     <Compile Include="loginCtrl.Designer.vb">
       <DependentUpon>loginCtrl.vb</DependentUpon>
     </Compile>
     <Compile Include="loginCtrl.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="mailerClass.vb" />
     <Compile Include="mainFrm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +151,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="newUserClass.vb" />
     <Compile Include="newUserCtrl.Designer.vb">
       <DependentUpon>newUserCtrl.vb</DependentUpon>
     </Compile>
@@ -110,8 +164,24 @@
     <Compile Include="releaseComponentCtrl.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Simple3Des.vb" />
+    <Compile Include="viewerHub.Designer.vb">
+      <DependentUpon>viewerHub.vb</DependentUpon>
+    </Compile>
+    <Compile Include="viewerHub.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="adminUserCtrl.resx">
+      <DependentUpon>adminUserCtrl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="changePassCtrl.resx">
+      <DependentUpon>changePassCtrl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="designerHub.resx">
+      <DependentUpon>designerHub.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="loginCtrl.resx">
       <DependentUpon>loginCtrl.vb</DependentUpon>
     </EmbeddedResource>
@@ -132,6 +202,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="AltiumDatabaseDataSet.xsc">
+      <DependentUpon>AltiumDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AltiumDatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AltiumDatabaseDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AltiumDatabaseDataSet.xss">
+      <DependentUpon>AltiumDatabaseDataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -142,6 +223,26 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginBtn.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

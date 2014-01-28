@@ -32,15 +32,15 @@ Partial Class releaseComponentCtrl
         'releaseGrid
         '
         Me.releaseGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.releaseGrid.Location = New System.Drawing.Point(24, 46)
+        Me.releaseGrid.Location = New System.Drawing.Point(15, 19)
         Me.releaseGrid.Name = "releaseGrid"
-        Me.releaseGrid.Size = New System.Drawing.Size(661, 331)
+        Me.releaseGrid.Size = New System.Drawing.Size(1048, 331)
         Me.releaseGrid.TabIndex = 0
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(104, 394)
+        Me.Label1.Location = New System.Drawing.Point(12, 368)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(44, 13)
         Me.Label1.TabIndex = 1
@@ -48,14 +48,14 @@ Partial Class releaseComponentCtrl
         '
         'searchTxt
         '
-        Me.searchTxt.Location = New System.Drawing.Point(165, 391)
+        Me.searchTxt.Location = New System.Drawing.Point(62, 365)
         Me.searchTxt.Name = "searchTxt"
         Me.searchTxt.Size = New System.Drawing.Size(219, 20)
         Me.searchTxt.TabIndex = 2
         '
         'searchBtn
         '
-        Me.searchBtn.Location = New System.Drawing.Point(390, 389)
+        Me.searchBtn.Location = New System.Drawing.Point(287, 365)
         Me.searchBtn.Name = "searchBtn"
         Me.searchBtn.Size = New System.Drawing.Size(75, 23)
         Me.searchBtn.TabIndex = 3
@@ -71,7 +71,7 @@ Partial Class releaseComponentCtrl
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.releaseGrid)
         Me.Name = "releaseComponentCtrl"
-        Me.Size = New System.Drawing.Size(707, 417)
+        Me.Size = New System.Drawing.Size(1092, 621)
         CType(Me.releaseGrid, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
