@@ -12,24 +12,25 @@
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <PublishUrl>publish\</PublishUrl>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>\\darth\Engineering\Altium\Manager\Install\</PublishUrl>
     <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
@@ -39,7 +40,7 @@
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <DefineDebug>false</DefineDebug>
     <DefineTrace>true</DefineTrace>
@@ -59,6 +60,44 @@
   </PropertyGroup>
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>D807D630CE73C260A95FF15A8A6833F7CD3626A0</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>AltiumManager_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>AltiumManager.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>AltiumManager.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -103,6 +142,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AltiumDatabaseDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ApplicationEvents.vb" />
     <Compile Include="changePassCtrl.Designer.vb">
       <DependentUpon>changePassCtrl.vb</DependentUpon>
     </Compile>
@@ -164,6 +204,13 @@
     <Compile Include="releaseComponentCtrl.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="sandboxCtrl.Designer.vb">
+      <DependentUpon>sandboxCtrl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="sandboxCtrl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="sandBoxPart.vb" />
     <Compile Include="Simple3Des.vb" />
     <Compile Include="viewerHub.Designer.vb">
       <DependentUpon>viewerHub.vb</DependentUpon>
@@ -173,6 +220,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="adminHub.resx">
+      <DependentUpon>adminHub.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="adminUserCtrl.resx">
       <DependentUpon>adminUserCtrl.vb</DependentUpon>
     </EmbeddedResource>
@@ -181,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="designerHub.resx">
       <DependentUpon>designerHub.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="librarianHub.resx">
+      <DependentUpon>librarianHub.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="loginCtrl.resx">
       <DependentUpon>loginCtrl.vb</DependentUpon>
@@ -200,6 +253,12 @@
     <EmbeddedResource Include="releaseComponentCtrl.resx">
       <DependentUpon>releaseComponentCtrl.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="sandboxCtrl.resx">
+      <DependentUpon>sandboxCtrl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewerHub.resx">
+      <DependentUpon>viewerHub.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="AltiumDatabaseDataSet.xsc">
@@ -213,6 +272,8 @@
     <None Include="AltiumDatabaseDataSet.xss">
       <DependentUpon>AltiumDatabaseDataSet.xsd</DependentUpon>
     </None>
+    <None Include="AltiumManager_TemporaryKey.pfx" />
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -243,6 +304,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HomeIcon.JPG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

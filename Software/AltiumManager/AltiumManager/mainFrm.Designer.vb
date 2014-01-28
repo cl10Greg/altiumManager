@@ -29,7 +29,6 @@ Partial Class mainFrm
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UsersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LoginToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NewUserToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ChangePasswordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ComponentsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -53,7 +52,11 @@ Partial Class mainFrm
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.contentPanel = New System.Windows.Forms.Panel()
+        Me.NamingToolToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CalculatorsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.MenuStrip1.SuspendLayout()
+        Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -91,7 +94,7 @@ Partial Class mainFrm
         '
         'UsersToolStripMenuItem
         '
-        Me.UsersToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LoginToolStripMenuItem, Me.NewUserToolStripMenuItem, Me.ChangePasswordToolStripMenuItem, Me.LogoutToolStripMenuItem})
+        Me.UsersToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LoginToolStripMenuItem, Me.ChangePasswordToolStripMenuItem, Me.LogoutToolStripMenuItem})
         Me.UsersToolStripMenuItem.Name = "UsersToolStripMenuItem"
         Me.UsersToolStripMenuItem.Size = New System.Drawing.Size(47, 20)
         Me.UsersToolStripMenuItem.Text = "Users"
@@ -101,12 +104,6 @@ Partial Class mainFrm
         Me.LoginToolStripMenuItem.Name = "LoginToolStripMenuItem"
         Me.LoginToolStripMenuItem.Size = New System.Drawing.Size(168, 22)
         Me.LoginToolStripMenuItem.Text = "Login"
-        '
-        'NewUserToolStripMenuItem
-        '
-        Me.NewUserToolStripMenuItem.Name = "NewUserToolStripMenuItem"
-        Me.NewUserToolStripMenuItem.Size = New System.Drawing.Size(168, 22)
-        Me.NewUserToolStripMenuItem.Text = "New User"
         '
         'ChangePasswordToolStripMenuItem
         '
@@ -130,18 +127,18 @@ Partial Class mainFrm
         'ReleasedToolStripMenuItem
         '
         Me.ReleasedToolStripMenuItem.Name = "ReleasedToolStripMenuItem"
-        Me.ReleasedToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ReleasedToolStripMenuItem.Size = New System.Drawing.Size(120, 22)
         Me.ReleasedToolStripMenuItem.Text = "Released"
         '
         'SandboxToolStripMenuItem
         '
         Me.SandboxToolStripMenuItem.Name = "SandboxToolStripMenuItem"
-        Me.SandboxToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SandboxToolStripMenuItem.Size = New System.Drawing.Size(120, 22)
         Me.SandboxToolStripMenuItem.Text = "Sandbox"
         '
         'DesignToolStripMenuItem
         '
-        Me.DesignToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReleasedToolStripMenuItem1, Me.SandboxToolStripMenuItem1})
+        Me.DesignToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReleasedToolStripMenuItem1, Me.SandboxToolStripMenuItem1, Me.NamingToolToolStripMenuItem, Me.CalculatorsToolStripMenuItem})
         Me.DesignToolStripMenuItem.Name = "DesignToolStripMenuItem"
         Me.DesignToolStripMenuItem.Size = New System.Drawing.Size(55, 20)
         Me.DesignToolStripMenuItem.Text = "Design"
@@ -149,13 +146,13 @@ Partial Class mainFrm
         'ReleasedToolStripMenuItem1
         '
         Me.ReleasedToolStripMenuItem1.Name = "ReleasedToolStripMenuItem1"
-        Me.ReleasedToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.ReleasedToolStripMenuItem1.Size = New System.Drawing.Size(144, 22)
         Me.ReleasedToolStripMenuItem1.Text = "Released"
         '
         'SandboxToolStripMenuItem1
         '
         Me.SandboxToolStripMenuItem1.Name = "SandboxToolStripMenuItem1"
-        Me.SandboxToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.SandboxToolStripMenuItem1.Size = New System.Drawing.Size(144, 22)
         Me.SandboxToolStripMenuItem1.Text = "Sandbox"
         '
         'RequestToolStripMenuItem
@@ -169,7 +166,7 @@ Partial Class mainFrm
         '
         Me.ComponentToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripMenuItem, Me.RevisionToolStripMenuItem})
         Me.ComponentToolStripMenuItem.Name = "ComponentToolStripMenuItem"
-        Me.ComponentToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ComponentToolStripMenuItem.Size = New System.Drawing.Size(138, 22)
         Me.ComponentToolStripMenuItem.Text = "Component"
         '
         'NewToolStripMenuItem
@@ -188,7 +185,7 @@ Partial Class mainFrm
         '
         Me.DesignToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripMenuItem1, Me.RevisionToolStripMenuItem1})
         Me.DesignToolStripMenuItem1.Name = "DesignToolStripMenuItem1"
-        Me.DesignToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.DesignToolStripMenuItem1.Size = New System.Drawing.Size(138, 22)
         Me.DesignToolStripMenuItem1.Text = "Design"
         '
         'NewToolStripMenuItem1
@@ -213,7 +210,7 @@ Partial Class mainFrm
         'RequestsToolStripMenuItem
         '
         Me.RequestsToolStripMenuItem.Name = "RequestsToolStripMenuItem"
-        Me.RequestsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.RequestsToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
         Me.RequestsToolStripMenuItem.Text = "Requests"
         '
         'AdminToolStripMenuItem
@@ -243,6 +240,7 @@ Partial Class mainFrm
         '
         'ToolStrip1
         '
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 24)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(736, 25)
@@ -256,6 +254,27 @@ Partial Class mainFrm
         Me.contentPanel.Name = "contentPanel"
         Me.contentPanel.Size = New System.Drawing.Size(736, 282)
         Me.contentPanel.TabIndex = 2
+        '
+        'NamingToolToolStripMenuItem
+        '
+        Me.NamingToolToolStripMenuItem.Name = "NamingToolToolStripMenuItem"
+        Me.NamingToolToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
+        Me.NamingToolToolStripMenuItem.Text = "Naming Tool"
+        '
+        'CalculatorsToolStripMenuItem
+        '
+        Me.CalculatorsToolStripMenuItem.Name = "CalculatorsToolStripMenuItem"
+        Me.CalculatorsToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
+        Me.CalculatorsToolStripMenuItem.Text = "Calculators"
+        '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton1.Image = Global.AltiumManager.My.Resources.Resources.HomeIcon
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(23, 22)
+        Me.ToolStripButton1.Text = "ToolStripButton1"
         '
         'mainFrm
         '
@@ -271,6 +290,8 @@ Partial Class mainFrm
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        Me.ToolStrip1.ResumeLayout(False)
+        Me.ToolStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -280,7 +301,6 @@ Partial Class mainFrm
     Friend WithEvents ExitToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents UsersToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents LoginToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents NewUserToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents LogoutToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ComponentsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ReleasedToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
@@ -306,5 +326,8 @@ Partial Class mainFrm
     Friend WithEvents CreateUserToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents LibrarianToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents RequestsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents NamingToolToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents CalculatorsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
 
 End Class

@@ -49,15 +49,6 @@
         userTxt.Clear()
     End Sub
 
-    Private Sub newUserBtn_Click(sender As Object, e As EventArgs) Handles newUserBtn.Click
-        Dim tempControl As New newUserCtrl
-        'Show the new user form
-        mainFrm.contentPanel.Controls.Clear()
-        mainFrm.contentPanel.Controls.Add(tempControl)
-        tempControl.Location = mainFrm.getCenter(tempControl)
-
-    End Sub
-
     Private Sub forgotBtn_Click(sender As Object, e As EventArgs) Handles forgotBtn.Click
         Dim loginObj As New loginClass
         Dim tempMail As New mailerClass
@@ -86,16 +77,15 @@
                 'find the user email
 
                 'email to the user
-                tempMail.sendPassword("ggirard@checkcorp.com", "Password Reset", newPass & " " & encPass)
+                tempMail.sendPassword(Trim(foundRow(0).UserEmail), "Password Reset", newPass)
+
+                MsgBox("A new password has been sent to the email on file.  Please login and with the new password and use the change password action under user.")
+
             Else
                 MsgBox("User doesn't exist")
             End If
 
         End If
-        'Check that the username is filled out and exist
-        'Create a random password
-        'Write to the table
-        'Email the user the new password
 
     End Sub
 

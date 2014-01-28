@@ -49,7 +49,7 @@ Public Class loginClass
         Dim s As String = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
         Dim r As New Random
         Dim sb As New StringBuilder
-        For i As Integer = 1 To 8
+        For i As Integer = 1 To 12
             Dim idx As Int16 = r.Next(0, s.Length())
             sb.Append(s.Substring(idx, 1))
         Next

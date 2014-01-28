@@ -29,7 +29,6 @@ Partial Class loginCtrl
         Me.passTxt = New System.Windows.Forms.TextBox()
         Me.loginBtn = New System.Windows.Forms.Button()
         Me.clearBtn = New System.Windows.Forms.Button()
-        Me.newUserBtn = New System.Windows.Forms.Button()
         Me.AltiumDatabaseDataSet = New AltiumManager.AltiumDatabaseDataSet()
         Me.UsersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.UsersTableAdapter = New AltiumManager.AltiumDatabaseDataSetTableAdapters.UsersTableAdapter()
@@ -74,7 +73,7 @@ Partial Class loginCtrl
         '
         'loginBtn
         '
-        Me.loginBtn.Location = New System.Drawing.Point(74, 67)
+        Me.loginBtn.Location = New System.Drawing.Point(3, 67)
         Me.loginBtn.Name = "loginBtn"
         Me.loginBtn.Size = New System.Drawing.Size(75, 23)
         Me.loginBtn.TabIndex = 4
@@ -83,21 +82,12 @@ Partial Class loginCtrl
         '
         'clearBtn
         '
-        Me.clearBtn.Location = New System.Drawing.Point(155, 67)
+        Me.clearBtn.Location = New System.Drawing.Point(84, 67)
         Me.clearBtn.Name = "clearBtn"
-        Me.clearBtn.Size = New System.Drawing.Size(96, 23)
+        Me.clearBtn.Size = New System.Drawing.Size(65, 23)
         Me.clearBtn.TabIndex = 5
         Me.clearBtn.Text = "Clear"
         Me.clearBtn.UseVisualStyleBackColor = True
-        '
-        'newUserBtn
-        '
-        Me.newUserBtn.Location = New System.Drawing.Point(74, 96)
-        Me.newUserBtn.Name = "newUserBtn"
-        Me.newUserBtn.Size = New System.Drawing.Size(75, 23)
-        Me.newUserBtn.TabIndex = 6
-        Me.newUserBtn.Text = "New User"
-        Me.newUserBtn.UseVisualStyleBackColor = True
         '
         'AltiumDatabaseDataSet
         '
@@ -121,7 +111,7 @@ Partial Class loginCtrl
         '
         'forgotBtn
         '
-        Me.forgotBtn.Location = New System.Drawing.Point(155, 96)
+        Me.forgotBtn.Location = New System.Drawing.Point(155, 67)
         Me.forgotBtn.Name = "forgotBtn"
         Me.forgotBtn.Size = New System.Drawing.Size(96, 23)
         Me.forgotBtn.TabIndex = 7
@@ -133,7 +123,6 @@ Partial Class loginCtrl
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.forgotBtn)
-        Me.Controls.Add(Me.newUserBtn)
         Me.Controls.Add(Me.clearBtn)
         Me.Controls.Add(Me.loginBtn)
         Me.Controls.Add(Me.passTxt)
@@ -141,7 +130,7 @@ Partial Class loginCtrl
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "loginCtrl"
-        Me.Size = New System.Drawing.Size(282, 136)
+        Me.Size = New System.Drawing.Size(282, 104)
         CType(Me.AltiumDatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UsersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -154,7 +143,6 @@ Partial Class loginCtrl
     Friend WithEvents passTxt As System.Windows.Forms.TextBox
     Friend WithEvents loginBtn As System.Windows.Forms.Button
     Friend WithEvents clearBtn As System.Windows.Forms.Button
-    Friend WithEvents newUserBtn As System.Windows.Forms.Button
     Friend WithEvents AltiumDatabaseDataSet As AltiumManager.AltiumDatabaseDataSet
     Friend WithEvents UsersBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents UsersTableAdapter As AltiumManager.AltiumDatabaseDataSetTableAdapters.UsersTableAdapter
